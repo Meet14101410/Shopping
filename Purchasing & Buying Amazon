@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon-like Product List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+    .buy-button {
+      background-color: #ff9900;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .sell-form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product" id="product1">
+    <h2>Product 1</h2>
+    <p>Description of Product 1.</p>
+    <p>Price: $19.99</p>
+    <button class="buy-button" onclick="buyProduct('Product 1', 19.99)">Buy Now</button>
+  </div>
+
+  <div class="product" id="product2">
+    <h2>Product 2</h2>
+    <p>Description of Product 2.</p>
+    <p>Price: $29.99</p>
+    <button class="buy-button" onclick="buyProduct('Product 2', 29.99)">Buy Now</button>
+  </div>
+
+  <div class="sell-form">
+    <h2>Sell a Product</h2>
+    <form onsubmit="sellProduct(event)">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" required>
+      <br>
+      <label for="productPrice">Product Price:</label>
+      <input type="number" id="productPrice" required>
+      <br>
+      <button type="submit">Sell Now</button>
+    </form>
+  </div>
+
+  <script>
+    function buyProduct(productName, price) {
+      alert(`You have successfully purchased ${productName} for $${price}`);
+      // You would typically have additional logic here, such as updating a user's cart or making a server request.
+    }
+
+    function sellProduct(event) {
+      event.preventDefault();
+      const productName = document.getElementById('productName').value;
+      const productPrice = document.getElementById('productPrice').value;
+
+      alert(`You have successfully listed ${productName} for sale at $${productPrice}`);
+      // You would typically send this information to a server for processing and database storage.
+    }
+  </script>
+
+</body>
+</html>
