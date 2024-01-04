@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon-like Product List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+    .bestseller {
+      background-color: #ffcc00;
+      font-weight: bold;
+    }
+    .branded {
+      color: #0066cc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Bestsellers</h2>
+
+  <div class="product bestseller" id="bestsellerProduct1">
+    <h3>Bestseller Product 1</h3>
+    <p>Description of Bestseller Product 1.</p>
+    <p>Price: $49.99</p>
+  </div>
+
+  <div class="product bestseller" id="bestsellerProduct2">
+    <h3>Bestseller Product 2</h3>
+    <p>Description of Bestseller Product 2.</p>
+    <p>Price: $39.99</p>
+  </div>
+
+  <h2>Branded Products</h2>
+
+  <div class="product branded" id="brandedProduct1">
+    <h3>Branded Product 1</h3>
+    <p>Description of Branded Product 1.</p>
+    <p>Price: $59.99</p>
+  </div>
+
+  <div class="product branded" id="brandedProduct2">
+    <h3>Branded Product 2</h3>
+    <p>Description of Branded Product 2.</p>
+    <p>Price: $69.99</p>
+  </div>
+
+</body>
+</html>
