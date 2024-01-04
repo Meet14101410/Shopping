@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon-like Product List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+    .discounted {
+      color: #ff0000;
+      font-weight: bold;
+    }
+    .refurbished {
+      color: #0066cc;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Discounted Products</h2>
+
+  <div class="product discounted" id="discountedProduct1">
+    <h3>Discounted Product 1</h3>
+    <p>Description of Discounted Product 1.</p>
+    <p>Original Price: $29.99</p>
+    <p>Discounted Price: $19.99</p>
+  </div>
+
+  <div class="product discounted" id="discountedProduct2">
+    <h3>Discounted Product 2</h3>
+    <p>Description of Discounted Product 2.</p>
+    <p>Original Price: $39.99</p>
+    <p>Discounted Price: $29.99</p>
+  </div>
+
+  <h2>Refurbished Products</h2>
+
+  <div class="product refurbished" id="refurbishedProduct1">
+    <h3>Refurbished Product 1</h3>
+    <p>Description of Refurbished Product 1.</p>
+    <p>Price: $24.99</p>
+  </div>
+
+  <div class="product refurbished" id="refurbishedProduct2">
+    <h3>Refurbished Product 2</h3>
+    <p>Description of Refurbished Product 2.</p>
+    <p>Price: $34.99</p>
+  </div>
+
+</body>
+</html>
