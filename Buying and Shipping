@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon-like Product List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+    .buy-button {
+      background-color: #ff9900;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .shipping-form {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product" id="product1">
+    <h2>Product 1</h2>
+    <p>Description of Product 1.</p>
+    <p>Price: $19.99</p>
+    <button class="buy-button" onclick="buyProduct('Product 1', 19.99)">Buy Now</button>
+  </div>
+
+  <div class="product" id="product2">
+    <h2>Product 2</h2>
+    <p>Description of Product 2.</p>
+    <p>Price: $29.99</p>
+    <button class="buy-button" onclick="buyProduct('Product 2', 29.99)">Buy Now</button>
+  </div>
+
+  <div class="shipping-form">
+    <h2>Shipping Information</h2>
+    <form onsubmit="submitShippingInfo(event)">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" required>
+      <br>
+      <label for="address">Shipping Address:</label>
+      <textarea id="address" required></textarea>
+      <br>
+      <button type="submit">Submit Shipping Info</button>
+    </form>
+  </div>
+
+  <script>
+    function buyProduct(productName, price) {
+      alert(`You have successfully purchased ${productName} for $${price}`);
+      // You would typically have additional logic here, such as updating a user's cart or making a server request.
+    }
+
+    function submitShippingInfo(event) {
+      event.preventDefault();
+      const fullName = document.getElementById('fullName').value;
+      const address = document.getElementById('address').value;
+
+      alert(`Shipping information submitted:\nFull Name: ${fullName}\nAddress: ${address}`);
+      // You would typically send this information to a server for processing and order fulfillment.
+    }
+  </script>
+
+</body>
+</html>
